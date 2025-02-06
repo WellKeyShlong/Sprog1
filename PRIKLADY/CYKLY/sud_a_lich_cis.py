@@ -1,4 +1,4 @@
-# Načtení přirozeného čísla jako meze
+# Načtení čísla jako meze
 mez = int(input("Zadejte přirozené číslo jako mez: "))
 
 # Pro každý počet od 1 do zadané meze

@@ -15,3 +15,4 @@ if (a + b) > c and (b + c) > a and (a +c) > b:
         print (f"Strany {a, b, c} tvori obecny trojuhelnik")
 else :
     print(f"strany {a, b, c} netvori trojuhelnik")
+    
