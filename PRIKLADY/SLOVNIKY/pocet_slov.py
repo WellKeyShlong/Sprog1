@@ -1,0 +1,1 @@
+#pocitani slov v textu
