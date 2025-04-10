@@ -1,7 +1,7 @@
 def pocet_cislic(n):
-    n = 0
+    cislice = 0
     for i in str(abs(n)):
-        n += 1   
-    print(f"{pocet_cislic}")
+        cislice += 1   
+    return cislice
 
-pocet_cislic(132465)
+print(pocet_cislic(132465))
