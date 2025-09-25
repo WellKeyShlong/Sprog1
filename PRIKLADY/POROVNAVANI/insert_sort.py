@@ -1,5 +1,5 @@
 
-cisla = list(input("Zadej čísla: "))
+#cisla = list(input("Zadej čísla: "))
 
 def insert_sort(pole):
     n = len(pole)
