@@ -10,7 +10,7 @@ from bubble3 import bubble3
 from bubble4 import bubble4
 from insert_sort import insert_sort
 from select_sort import select_sort
-from quick_sort import quick_sort
+from quick_sort import quick
 
 def measure_sorts():
     lists_lens = [n for n in range (10,100,10)]
@@ -32,7 +32,7 @@ def measure_sorts():
         bubble4_res.append(bubble4(copy.deepcopy(unsorted_list)))
         insert_res.append(insert_sort(copy.deepcopy(unsorted_list)))
         select_res.append(select_sort(copy.deepcopy(unsorted_list)))
-        quick_res.append(quick_sort(copy.deepcopy(unsorted_list)))
+        quick_res.append(quick(copy.deepcopy(unsorted_list)))
 
     plt.plot(lists_lens, bubble1_res, label='bubbleV1', color='blue')
     plt.plot(lists_lens, bubble2_res, label='bubbleV2', color='red')
@@ -40,7 +40,7 @@ def measure_sorts():
     plt.plot(lists_lens, bubble4_res, label='bubbleV4', color='green')
     plt.plot(lists_lens, insert_res, label='insert', color='purple')
     plt.plot(lists_lens, select_res, label='select', color='orange')
-    plt.plot(lists_lens, quick_res, label='quick_sort', color='black')
+    plt.plot(lists_lens, quick_res, label='quick', color='black')
 
     plt.legend()
     plt.show()
