@@ -11,9 +11,10 @@ from bubble4 import bubble4
 from insert_sort import insert_sort
 from select_sort import select_sort
 from quick_sort import quick
+#from merge import merge_sort
 
 def measure_sorts():
-    lists_lens = [n for n in range (10,100,10)]
+    lists_lens = [n for n in range (10,200,10)]
 
     bubble1_res = []
     bubble2_res = []
@@ -22,8 +23,9 @@ def measure_sorts():
     insert_res = []
     select_res = []
     quick_res = []
+    #merge_res = []
 
-    for n in range(10,100,10):
+    for n in range(10,200,10):
         unsorted_list = [random.randint(0,n**2) for i in range (n)]
 
         bubble1_res.append(bubble1(copy.deepcopy(unsorted_list)))
@@ -33,6 +35,8 @@ def measure_sorts():
         insert_res.append(insert_sort(copy.deepcopy(unsorted_list)))
         select_res.append(select_sort(copy.deepcopy(unsorted_list)))
         quick_res.append(quick(copy.deepcopy(unsorted_list)))
+        #merge_res.append(quick(copy.deepcopy(unsorted_list)))
+
 
     plt.plot(lists_lens, bubble1_res, label='bubbleV1', color='blue')
     plt.plot(lists_lens, bubble2_res, label='bubbleV2', color='red')
@@ -41,6 +45,7 @@ def measure_sorts():
     plt.plot(lists_lens, insert_res, label='insert', color='purple')
     plt.plot(lists_lens, select_res, label='select', color='orange')
     plt.plot(lists_lens, quick_res, label='quick', color='black')
+    #plt.plot(lists_lens, merge_res, label='merge', color='pink')
 
     plt.legend()
     plt.show()

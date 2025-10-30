@@ -7,7 +7,7 @@ def bubble2(pole):
     for i in range(n - 1):
         prohodil_se = False
         
-        for j in range(n - 1):
+        for j in range(n - 1 - i):
             pocet_porovnani += 1  
             if pole[j] > pole[j + 1]:
                 pole[j], pole[j + 1] = pole[j + 1], pole[j]

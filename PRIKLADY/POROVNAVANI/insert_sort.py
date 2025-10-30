@@ -8,16 +8,17 @@ def insert_sort(pole):
         nvm = pole[i]
         j = i - 1
 
-        while j >= 0:
+        while j >= 0 and pole[j] > nvm:
             pocet_porovnani += 1
-            if pole[j] > nvm:
-                pole[j + 1] = pole[j]
-                j -= 1
-            else:
-                break
+            pole[j + 1] = pole[j]
+            j -= 1
+
+        if j >= 0:
+            pocet_porovnani += 1
 
         pole[j + 1] = nvm
 
     return pocet_porovnani
+
 
 
