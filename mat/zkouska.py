@@ -40,6 +40,17 @@ class Rectangle:
             return True
         else:
             return False
+        
+
+    def scale(self, factor):
+        points = [self.p1, self.p2, self.p3, self.p4]
+
+        min_x = min(p.x for p in points)
+        min_y = min(p.y for p in points)  
+
+        for p in points:
+            p.x = min_x + (p.x - min_x) * factor
+            p.y = min_y + (p.y - min_y) * factor
 
 
 r = Rectangle(
